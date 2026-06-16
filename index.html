@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>For You ❤️</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            max-width: 400px;
+        }
+
+        h1 {
+            color: #ff4d6d;
+        }
+
+        p {
+            font-size: 18px;
+            color: #333;
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 16px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        .yes {
+            background-color: #ff4d6d;
+            color: white;
+        }
+
+        .no {
+            background-color: #ccc;
+        }
+
+        .heart {
+            font-size: 40px;
+            animation: beat 1s infinite;
+        }
+
+        @keyframes beat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <div class="heart">❤️</div>
+    <h1>Hey sweetgirl♥️!</h1>
+    <p>
+        From the moment I saw you,<br>
+        my heart knew something special 💫<br><br>
+        I may not be perfect,<br>
+        but my feelings for you are real 💖
+    </p>
+
+    <h2>Will you be mine?</h2>
+
+    <button class="yes" onclick="yesClicked()">YES 💕</button>
+    <button class="no" onclick="noClicked()">NO 🙈</button>
+</div>
+
+<script>
+    function yesClicked() {
+        document.body.innerHTML = `
+            <div style="
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                height:100vh;
+                background:#ff4d6d;
+                color:white;
+                font-family:Arial;
+                text-align:center;
+                flex-direction:column;
+            ">
+                <h1>Yayyy! 😍❤️</h1>
+                <p style="font-size:22px;">
+                    You just made me the happiest person 💕<br>
+                    I promise to always make you smile 😊
+                    Your smile is my smile
+                </p>
+            </div>
+        `;
+    }
+
+    function noClicked() {
+        alert("Are you sure? 😢 Please think again 💔");
+    }
+</script>
+
+</body>
+</html>
